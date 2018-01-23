@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+body, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, table, th, td, form, fieldset, legend, input, textarea, button, select, img, div{margin:0;padding:0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{display:block;}
+img, fieldset, input[type="text"]{border:0;}
+ul, ol{list-style:none;}
+img, input, select{vertical-align:middle;}
+em, address{font-style:normal;}
+table{border-collapse:collapse;border-spacing:0px;empty-cells:show;table-layout:fixed;}
+caption{height:0;width:0;margin:0;padding:0;font-size:0;line-height:0;visibility:hidden;}
+body, input, select, textarea{color:#444;font-size:13px;font-family:'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;}
+body{-webkit-text-size-adjust:none;}
+a:link, a:visited{color:#117cb2;text-decoration:none;}
+a:hover{color:#117cb2;text-decoration:none;}
+a:active{color:#117cb2;text-decoration:none;}
+.blind{position:absolute;left:-1000px;top:0;height:0;width:0;font-size:0;line-height:0;}
+.underline{text-decoration:underline;}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html leng="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>홈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+
+<body>
+    <div class="exam ex_42" id="exam_42">
+                <style>                    
+                    .ex_42 .img_wrap{display: table; border: 1px solid #999;width: 300px;height: 300px;text-align:center;}
+                    .ex_42 .inner{display: table-cell; vertical-align: middle;background: #999}
+                    .ex_42 ul{overflow: hidden;}
+                    .ex_42 li{float: left;margin: 0 10px}
+                </style>
+                <p class="exam_p">exam 42</p>
+                <p class="tit">썸네일 이미지</p>
+                <ul>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="inner">
+                                 <img src="../img/1.jpg" style="width: 100%;"> 
+                            </div>                  
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="inner">
+                                 <img src="../img/2.jpg" style="height: 300px;"> 
+                            </div>                  
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="img_wrap">
+                            <div class="inner">
+                                 <img src="../img/3.jpg" style="width: 100%;"> 
+                            </div>                  
+                        </div> 
+                    </li>
+                </ul>
+                   
+                <script>
+                    $(".ex_42 li").each(function(e){
+                        var outH = $(".ex_42 .img_wrap").height();
+                        var nW = $(".ex_42 img").get(e).naturalWidth; 
+                        var nH = $(".ex_42 img").get(e).naturalHeight;
+
+                        if(nW > nH || nW == nH){
+                           $(".ex_42 img").eq(e).css({
+                                width:'100%'
+                           })
+                        }else if(nW < nH){
+                           $(".ex_42 img").eq(e).css({
+                                height:outH
+                           })
+                        }
+                    })                                        
+                </script>
+            </div>
+</body>
+
+</html>
+
+

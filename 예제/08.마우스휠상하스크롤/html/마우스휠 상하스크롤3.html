@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html leng="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>홈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        body {
+            overflow: hidden
+        }
+       
+        
+        .box {
+            overflow: hidden;
+            height:auto;
+        }
+        
+        .box:nth-child(1) {
+            height: 100%;
+            background: red
+        }
+        
+        .box:nth-child(2) {
+            height: 100%;
+            background: blue
+        }
+        
+        .box:nth-child(3) {
+            height: 100%;
+            background: green
+        }
+        
+        .act {
+            position: relative;
+            bottom: -100%;
+            text-align: center;
+            color: #fff;
+            font-size: 40px;
+            transition: bottom 1.0s;
+        }
+                                
+        .act1.on {
+            bottom: -30%;
+        }
+        
+        .act2.on {
+            transition-delay: 0.3s;
+            bottom: -35%;
+        }
+        
+        .act3.on {
+            transition-delay: 0.6s;
+            bottom: -40%;
+        }
+             
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div id="container">
+            <div class="box_wrap">
+                <div class="box">
+                    <div class="act act1">안녕하세요.</div>
+                    <div class="act act2">반갑습니다.</div>
+                    <div class="act act3">축하해요.</div>
+
+                </div>
+                <div class="box">
+                    <div class="act act1">테스트.</div>
+                    <div class="act act2">환영합니다.</div>
+                    <div class="act act3">하하하.</div>
+                </div>
+                <div class="box">
+                    <div class="act act1">마우스휠</div>
+                    <div class="act act2">상하스트롤 입니다.</div>
+                    <div class="act act3">참 쉽죠.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+        fullV()
+        
+        function fullV(){
+            var h = $(window).height();
+            $('.box_wrap').css({
+                height: h
+            })
+
+            $('.box').eq(0).find('.act').addClass('on');
+            $('.box').on('mousewheel DOMMouseScroll', function(e) {
+                if ($('.box_wrap').is(':animated')) {
+                    return false;
+                }
+                var num = $(this).index();
+                var even = e.originalEvent.wheelDelta;
+
+                if (even < 0) {
+                    if (num >= 2) {
+                        return false;
+                    }
+                    num++;
+                    $('.box_wrap').animate({
+                        'margin-top': -num * h
+                    })
+                } else if (even > 0) {
+                    num--;
+                    if (num < 0) {
+                        return false;
+                    }
+                    $('.box_wrap').animate({
+                        'margin-top': -num * h
+                    })
+                }
+                $('.act').removeClass('on')                       
+                if (num == 0) {               
+                    $('.box').eq(0).find('.act').addClass('on');
+                }
+                if (num == 1) {            
+                    $('.box').eq(1).find('.act').addClass('on');
+                }
+                if (num == 2) {             
+                    $('.box').eq(2).find('.act').addClass('on');
+                }
+            })
+        }
+        
+        
+        $( window ).resize(function() {
+            fullV()
+        });
+
+    </script>
+</body>
+
+</html>

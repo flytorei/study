@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html leng="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>홈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        #wrap{width: 800px;margin:0 auto;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="event01">
+            <p class="exam">예제)1</p>
+            <div class="box">
+            </div>
+            <script type="text/javascript">                
+                $('.box').append('<p>1</p>');
+                $('.box').append('<p>2</p>');
+                $('.box').append('<p>3</p>');
+                $('.box').append('<p>4</p>');
+                $('.box').append('<p>5</p>');
+                $('.box').append('<p>6</p>');
+                $('.box').append('<p>7</p>');
+
+                
+                for(var i=1;i<=7;i++){
+                    $('.box').append('<p>'+i+'</p>');
+                }
+            </script>
+        </div>            
+    </div>
+</body>
+</html>
+
+

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no" />
+	<title>홈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <style>    
+    /* reset 
+    ------------------------------------------ */
+    body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,img,div{margin:0; padding:0}
+    article, aside, details, figcaption, figure, footer, header, hgroup, nav, section{display:block}
+    img,fieldset,input[type="text"]{border:0}
+    ul,ol{list-style:none}
+    img,input,select{vertical-align:middle}
+    em,address{font-style:normal}
+    table{border-collapse:collapse; border-spacing:0px; empty-cells:show; table-layout:fixed}
+    caption{visibility:hidden; width:0; height:0; margin:0; padding:0; font-size:0; line-height:0;}
+
+    /* basic
+    ------------------------------------------ */
+    /*html, body{width:100%; height:100%} 주석풀지 말아요! */
+    body, input, select, textarea{font-family:'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; font-size:13px; color:#444}/* 휴대폰 기본 폰트 적용, 숫자 동일*/
+    body{-webkit-text-size-adjust:none}
+    a:link, a:visited{text-decoration:none; color:#117cb2}
+    a:hover{text-decoration:none; color:#117cb2}
+    a:active{text-decoration:none; color:#117cb2}
+    .blind{position:absolute; top:0; left:-1000px; width:0; height:0; font-size:0; line-height:0}
+    .underline{text-decoration:underline}
+
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.countdown.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+            $("#listButton").click(function(){
+              $.ajax({
+                    type:"post",
+                    url:"sample.json",
+                    success:function(data){
+                        $.each(data, function(e){                                                   
+                             $('#no').text(this.no);
+                             $('#name').text(this.name);
+                             $('#job').text(this.job);
+                             console.log(data[e])
+                           //  console.log("no : "+ this.no +" , name : " +this.name + " , job : " + this.job )                                                                         
+                       });
+                    }
+                })
+            })		
+        })
+	</script>
+</head>
+<body>
+
+<div class="wrap">
+	<input type="button" id="listButton" value="리스트출력" />
+    <br/>
+    <span id="no"></span>
+    <span id="name"></span>
+    <span id="job"></span>
+  
+
+</div>
+
+</body>
+</html>
+

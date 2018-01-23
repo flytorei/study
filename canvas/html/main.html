@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html leng="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>canvas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link type="text/css" rel="stylesheet" href="../SyntaxHighlighter/Styles/shCoreDefault.css" />
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script> 
+    <script type="text/javascript" src="../SyntaxHighlighter/Scripts/shCore.js"></script>
+    <script type="text/javascript" src="../SyntaxHighlighter/Scripts/shBrushJScript.js"></script>
+    <script type="text/javascript" src="../js/canvas.js"></script>
+    
+</head>
+<body>
+    <div class="wrap">
+        <div class="exam">
+            <canvas id="myCanvas01" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas01");
+                var ctx = c.getContext("2d");
+                ctx.moveTo(0,0);
+                ctx.lineTo(200,100);
+                ctx.stroke();
+            </pre>
+        </div>   
+        <div class="exam">
+            <canvas id="myCanvas02" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas02");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(95,50,40,0,2*Math.PI);
+                ctx.stroke();
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas02_01" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas02_01");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(95,50,40,0,2*Math.PI);
+                ctx.fillStyle = "yellow";
+                ctx.fill();
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas03" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas03");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.fillText("Hello World",10,50);
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas04" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas04");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.strokeText("Hello World",10,50);
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas05" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas05");
+                var ctx = c.getContext("2d");
+                var grd = ctx.createLinearGradient(0,0,200,0);
+                grd.addColorStop(0,"red");
+                grd.addColorStop(1,"white");
+                ctx.fillStyle = grd;
+                ctx.fillRect(10,10,150,80);
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas06" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas06");
+                var ctx = c.getContext("2d");
+                var grd = ctx.createRadialGradient(75,50,5,90,60,100);
+                grd.addColorStop(0,"red");
+                grd.addColorStop(1,"white");
+                ctx.fillStyle = grd;
+                ctx.fillRect(10,10,150,80);
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas07" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas07");
+                var ctx = c.getContext("2d");
+                ctx.fillStyle = "green";
+                ctx.fillRect(10,10,50,50);
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas07_01" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas07_01");
+                var ctx = c.getContext("2d");
+                ctx.lineWidth = 4;
+                ctx.strokeRect(10,10,50,50);
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas07_02" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas07_02");
+                var ctx = c.getContext("2d");
+                ctx.shadowOffsetX = 10;
+                ctx.shadowOffsetY = 10;
+                ctx.shadowBlur = 4;
+                ctx.shadowColor = "#666";
+
+                ctx.fillStyle = "#000";
+                ctx.fillRect(10,10,50,50); 
+            </pre>
+        </div> 
+        <div class="exam">
+            <canvas id="myCanvas08" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var c = document.getElementById("myCanvas08");
+                var ctx = c.getContext("2d");        
+                var image = new Image();
+                image.src = "http://www.fuz.co.kr/wp-content/themes/fuz2017/images/common/logo.png";       
+                ctx.drawImage(image,10,10);    
+            </pre>
+        </div>
+        <div class="exam">
+            <canvas id="myCanvas09" width="200" height="100" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var x = 0;
+                var y = 15;
+                var speed = 2;
+
+                function animate(){
+                    reqAnimFrame = window.mozRequestAnimationFrame ||
+                        window.webkitRequestAnimationFrame ||
+                        window.msRequestAnimationFrame||
+                        window.oRequestAnimationFrame;
+
+                    reqAnimFrame(animate);
+                    x += speed;
+                    if(x <= 0 || x >=175){
+                        speed = -speed;
+                    }            
+                    draw();
+                }        
+                function draw(){
+                    var c = document.getElementById("myCanvas09");
+                    var ctx = c.getContext("2d");
+
+                    ctx.clearRect(0,0,500,170);
+                    ctx.fillStyle = "#ff00ff";
+                    ctx.fillRect(x,y,25,25);
+                }
+                animate();    
+            </pre>
+        </div>
+        <div class="exam">
+            <canvas id="myCanvas10" width="500" height="500" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                var sun = new Image();
+                var moon = new Image();
+                var earth = new Image();
+                init();
+                function init(){
+                    sun.src = "https://mdn.mozillademos.org/files/1456/Canvas_sun.png";
+                    moon.src = "https://mdn.mozillademos.org/files/1443/Canvas_moon.png";
+                    earth.src = "https://mdn.mozillademos.org/files/1429/Canvas_earth.png";            
+                    setInterval(draw,100);           
+                }
+
+                function draw(){
+                    var ctx = document.getElementById("myCanvas10").getContext("2d");
+                    ctx.globalCompositeOperation = "destination-over";
+                    ctx.clearRect(0,0,400,400); //캔버스를 비운다.
+                    ctx.fillStyle = "rgba(0,0,0,0.4)";
+                    ctx.strokeStyle = "rgba(0,153,255,0.4)";
+                    ctx.save();
+                    ctx.translate(150,150);
+
+                    // 지구
+                    var time = new Date();
+                    ctx.rotate( ((2*Math.PI)/60)*time.getSeconds() + ((2*Math.PI)/60000)*time.getMilliseconds() );
+                    ctx.translate(105,0);
+                    ctx.fillRect(0,-12,50,24); // Shadow
+                    ctx.drawImage(earth,-12,-12);
+
+                    // 달
+                    ctx.save();
+                    ctx.rotate( ((2*Math.PI)/6)*time.getSeconds() + ((2*Math.PI)/6000)*time.getMilliseconds() );
+                    ctx.translate(0,28.5);
+                    ctx.drawImage(moon,-3.5,-3.5);
+                    ctx.restore();
+
+                    ctx.restore();
+
+                    ctx.beginPath();
+                    ctx.arc(150,150,105,0,Math.PI*2,false); // 지구 궤도
+                    ctx.stroke();
+
+                    ctx.drawImage(sun,0,0,300,300);
+                }
+            </pre>
+        </div>    
+        <div class="exam">
+            <canvas id="pic01" width="800" height="500" style="border:1px solid #ccc;"></canvas>
+            <pre class="brush:js">
+                
+            </pre>
+        </div> 
+   </div>
+
+    
+    
+<script type="text/javascript">
+    //<![CDATA[
+    SyntaxHighlighter.all();
+    canvas.init();
+    //]]>
+</script>
+    
+</body>
+</html>

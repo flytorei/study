@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html leng="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>홈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript" src="../js/script.js"></script>
+</head>
+<style>
+    .box{width: 200px;height: 200px;background: red;}    
+</style>
+<body>
+    <div class="wrap">
+        <div class="box">박스</div>
+    </div>
+
+
+    <script type="text/javascript">
+        jQuery.fn.center = function () {
+            this.css("position","absolute");
+            this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
+            this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
+            return this;
+        }
+        $(".box").center();
+        $(window).resize(function(){
+            $(".box").center();
+        })
+    </script>
+</body>
+
+</html>
+
+

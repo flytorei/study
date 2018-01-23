@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+#wrap{width: 1000px;margin: 0 auto}
+#header{height: 100px;margin-bottom: 10px; background: yellow}
+#container{margin-bottom: 10px}
+.visual{height: 300px;margin-bottom: 10px; background: blue}
+.main_contents{overflow: hidden; margin-bottom: 10px;}
+.main_contents .l_area{float: left;width: 50%;}
+.main_contents .r_area{float: left;width: 50%;}
+.main_contents .l_area .inner{height: 200px;margin-right: 5px;background: red}
+.main_contents .r_area .inner{height: 200px;margin-left: 5px; background: red}
+.banner{height: 100px;background: green}
+
+#footer{height: 200px;background: #000}

@@ -1,0 +1,9 @@
+@charset"utf-8";
+
+#header{height: 100px;background: red}
+#container{min-height: 600px;background: blue}
+#footer{height: 100px;background: #000}
+
+
+
+

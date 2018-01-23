@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+.wrap{ padding-bottom: 100px;margin-top: 100px}
+.exam{padding: 50px 50px 20px;}
+.exam .exam_p{margin-bottom: 20px}
+.ex_01 .tab{overflow: hidden}
+.ex_01 .tab li{float: left}
+.ex_01 .tab li a{display: block;height: 20px;width: 50px;border: 1px solid #ccc;margin-bottom: -1px;margin-right: -1px;text-align: center;}
+.ex_01 .tab li a.on{color: red;background-color: #ccc}
+.ex_01 .tab_cts_wrap .tab_cts{display: none;height: 100px;width: 100%;border: 1px solid #ccc;padding: 10px}
+.ex_01 .tab_cts_wrap .tab_cts.on{display: block}
+
+.ex_02 .qna dt a{background: #ccc;padding: 10px;display: block;border-bottom: 1px solid #fff}
+.ex_02 .qna dt.on{display: block}
+.ex_02 .qna dd{background: #666;padding: 10px;color: #fff;display:none;height: 100px}
+.ex_02 .qna dd.on{display: block}  
+
+.layer_pop{position: relative;display: none;left: 50%; max-width: 800px; height: 400px; position: fixed;top: 0;margin: 20px;padding: 20px; width:500px;color: #fff; background: blue;overflow: hidden}
+.layer_pop .cls{position: absolute;top: 20px;right: 20px;width: 50px;height: 50px;background: #fff;color: #000}
+.dim{display: none; background: #000;opacity: 0.7;position: fixed;top: 0; left: 0; width: 100%;height: 100%;}
+.dim .tdim{width: 100%;height: 100%;}
+
+.toggle{position: fixed;top: 0;right: -200px;background: #ccc; width: 200px;height: 100%;background: #000}
+.toggle .toggle_inner{margin: 10px;color: #fff}
+
+.top_btn{display: none}
+.top_btn a{display: block;width: 50px;height: 50px;background: yellow;position: fixed;right: 20px;bottom: 20px;} 
+
+.gnb{position: absolute;top: 50px; width: 100%;margin: 0 auto;background: yellow;z-index: 999}
+.gnb ul{overflow: hidden;margin: 10px}
+.gnb li{float: left;margin-right: 20px;text-align: center}
+.gnb li a{display: block}
+.gnb li a.on{color: red}
+
+.mouse_point{position: relative;width: auto;height: 400px;border: 1px solid #ccc}
+
+.slide_wrap{width: auto;height: 400px;border: 1px solid #ccc}
+.slide_wrap .slide_inner{margin: 50px;border: 1px solid #ccc;height: 300px;}
+.slide_wrap .slide{overflow: hidden;height: 100px; position: relative;width: 100px;margin: 0 auto;border: 1px solid #ccc;}
+.slide_wrap .slide li{position: absolute;top:0;left:0;width:100px;height: 100px;background: red;font-size: 20px;text-align: center;font-weight: bold}
+.slide_wrap .slide li.s1{background: red;left: 0;background: yellow}
+.slide_wrap .slide li.s2{background: red;left: 100px;background: blue}
+.slide_wrap .slide li.s3{background: red;left: 100px}
+.slide_wrap .slide li.s4{background: red;left: 100px;background: green}
+.slide_wrap .slide_inner .btn_wrap{width: 200px;margin: 0 auto;text-align: center}
+
+.ex_09 .print_09{font-size: 20px}
+
+.ex_11 ul{overflow: hidden}
+.ex_11 ul li{width: 100px;height: 100px;float: left;margin-right: 5px;margin-bottom: 5px; border: 1px solid #ccc}
+.ex_11 ul li.on{background: yellow}
+
+.ex_12 input{border: 1px solid #ccc}
+
+.ex_13 ul{overflow: hidden}
+.ex_13 ul li{position: relative;width: 100px;height: 100px;float: left;margin-right: 5px;margin-bottom: 5px; z-index: 1;background: green}
+.ex_13 ul li.on{background: yellow;z-index: 5!important}
+
+.multi_slide_wrap{width: auto;height: 400px;border: 1px solid #ccc}
+.multi_slide_wrap .slide_inner{margin: 50px;border: 1px solid #ccc;height: 300px;}
+.multi_slide_wrap .slide{height: 100px; position: relative;width: 300px;margin: 0 auto;border: 1px solid #ccc;overflow: hidden}
+.multi_slide_wrap .slide li{position: absolute;top:0;left:0;width:100px;height: 100px;background: red;font-size: 20px;text-align: center;font-weight: bold}
+.multi_slide_wrap .slide li.s1{background: red;left: 0;background: yellow}
+.multi_slide_wrap .slide li.s2{background: red;left: 100px;background: blue}
+.multi_slide_wrap .slide li.s3{background: red;left: 200px}
+.multi_slide_wrap .slide li.s4{background: red;left: 300px;background: green}
+.multi_slide_wrap .slide li.s5{background: red;left: 400px;background: green}
+.multi_slide_wrap .slide li.s6{background: red;left: 500px;background: green}
+.multi_slide_wrap .slide li.s7{background: red;left: 600px;background: green}
+.multi_slide_wrap .slide li.s8{background: red;left: 700px;background: green}
+.multi_slide_wrap .slide_inner .btn_wrap{width: 200px;margin: 0 auto;text-align: center}
+
+.ex_15 ul{overflow: hidden}
+.ex_15 ul li{position: relative;width: 100px;height: 100px;float: left;margin-right: 5px;margin-bottom: 5px; z-index: 1;background: green;font-size: 20px;color: #fff}
+.ex_15 ul li a{color: red;font-size: 12px}
+
+.ex_16 .card_wrap{width:500px;height:500px;border:1px solid #ccc}
+.ex_16 .card_wrap .card{position: relative;margin: 40px 100px}
+.ex_16 .card_wrap .card li{position: absolute;top: 0;left: 0;}
+.ex_16 .card_wrap .card li a{display: block; width: 200px;height: 300px;border: 1px solid blue}
+.ex_16 .card_wrap .card .c1{top: 0;background: red}
+.ex_16 .card_wrap .card .c2{top: 50px;background: blue}
+.ex_16 .card_wrap .card .c3{top: 100px;background: green}
+
+.hover_effact .list{overflow: hidden}
+.hover_effact li{position: relative;float: left;display: table;margin-right: 5px}
+.hover_effact li a{display: table-cell;width: 200px;height: 200px; border: 1px solid #eee;margin-right: 10px;vertical-align: middle;text-align: center;background:#eee;z-index:1}
+.hover_effact li a img{width: 200px;}
+.hover_effact li .bg{display: none; background:#000;opacity: 0.5; width: 100%;height: 100%;position: absolute;top: 0;left: 0;z-index: 0}
+.hover_effact li .txt{display: none; position: absolute;bottom: 0;left: 0; width: 100%;height: 30px;z-index: 0;color: #fff;}
+.hover_effact li .txt span{display: block; margin-top: 5px;}
+
+.ex_17 .hover_effact li:hover .bg{display: block}
+.ex_17 .hover_effact li:hover .txt{display: block}
+
+.ex_18 .hover_effact li .bg{opacity: 0;}
+.ex_18 .hover_effact li .txt{height: 0}
+.ex_18 .hover_effact li.on .bg{display: block}
+.ex_18 .hover_effact li.on .txt{display: block;background: #fff;color: #000;}
+
+.all_view ul{height: 160px;min-height: 160px;overflow: hidden;background: #fff;padding-bottom: 5px}
+.all_view ul li{height: 30px;line-height: 30px; border-bottom: 1px solid #ccc;padding-left: 20px;background: #eee;margin-bottom: 2px}
+.all_view .btn_wrap{margin-top: 5px}
+.all_view .btn_wrap a{display: block;;background: #ccc;text-align: center;height: 30px;line-height: 30px}
+
+.card2{position: relative;height: 450px;}
+.card2 li{position: absolute;left: 0;top: 0; width: 200px;height: 300px;border: 2px solid #eee;background: #fff;background: yellow;font-weight: bold;color: #fff}
+.card2 .list1{background: blue}
+.card2 .list2{background: red}
+.card2 .list3{background: green}
+
+.hover_box_wrap{padding: 50px;border: 1px solid #eee}
+.hover_box{overflow: hidden}
+.hover_box li a{float: left;border: 1px solid #000;width: 100px;height: 100px;margin-right: 10px;margin-bottom: 10px;display: block;position: relative;overflow: hidden}
+.hover_box li a span{display: block;background: red;width: 100%;height: 100%;position: absolute;top: -100px;left: 0;}
+
+.card3{position: relative;height: 450px;}
+.card3 li{position: absolute;left: 0;top: 0; width: 200px;height: 300px;border: 2px solid #eee;background: #fff;background: yellow;font-weight: bold;color: #fff}
+.card3 .list1{background: blue}
+.card3 .list2{background: red;top:50px}
+.card3 .list3{background: green;top:100px}
+.card3 .list4{background: yellow;top:150px}
+
+.scroll_box{width: 500px;height: 100px;overflow-x: scroll;overflow-y: hidden; border: 1px solid #000}
+.scroll_box ul{width: 820px}
+.scroll_box ul li{float: left;background: yellow;border: 1px solid #eee}
+.scroll_box ul li a{display: block;width: 100px;height: 100px;}
+.scroll_box .on{background: red}
+
+.slide_wrap .slide li:first-child{z-index: 10}
+.slide_wrap .slide .s5{background: #333}
+.slide_wrap .slide .s6{background: #666}
+.slide_wrap .slide .s7{background: #999}
+.slide_wrap .slide .s8{background: orange}
+
+
+
+
+
+
+.ex_24 .ve{width:100%;margin: 50px auto;border: 1px solid #eee}
+.ex_24 .ve .container {margin: 0 auto;width: 128px;height: 113px;margin-top: 30px; -webkit-perspective: 900px;}
+.ex_24 .ve .card {margin: 0;-webkit-transition: 1s;-webkit-transform-style:preserve-3d;}
+.ex_24 .ve .card:hover {-webkit-transform: rotateY(-180deg);}
+.ex_24 .ve .card img {position: absolute;/*  -webkit-backface-visibility: hidden;*/}
+
+
+.ex_25 .hill{border: 1px solid #666;height: 300px;width: 100%;margin-top: 20px;overflow: hidden}
+
+.ex_25 .hill ul{position: relative}
+.ex_25 .hill li{height: 300px;position: absolute;top: 0;left: 0;width: 100%}
+.ex_25 .hill li:first-child{top: 0}
+.ex_25 .hill li:not(first-child){top: 300px}
+.ex_25 .hill .hi1{background: red}
+.ex_25 .hill .hi2{background: blue}
+.ex_25 .hill .hi3{background: yellow}
+.ex_25 .hill .hi4{background: #eee}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html leng="ko">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no, address=no, email=no" />
+    <title>홈</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
+    <link rel="stylesheet" type="text/css" href="../css/reset.css">
+    <script type="text/javascript" src="../js/jquery-1.11.2.min.js"></script>
+    <style type="text/css">
+        #wrap{width: 800px;margin: 0 auto;padding-top: 100px;padding-bottom: 100px}
+        .exam{margin: 20px 0 10px;font-weight: bold;color: #009e25}
+
+        .event01 .box{width: 100px;height: 100px;background: red}
+        .event01 .box.active{background: blue}
+
+        .event04 .box{padding:25px;width: 100px;height: 100px;border: 1px solid #000;box-sizing: border-box;}
+        .event04 .inbox{width: 100%;height: 100%;background: green} 
+
+        .event05{height: 150px}
+        .event05 .box{display: block; width: 100px;height: 100px;border:2px solid #000;}
+        .event05 .box.active{display: none}
+
+        .event06{position: relative;height: 150px}
+        .event06 .box{position: absolute;top: 50px;left: 0; width: 100px;height: 100px;background: green}
+        .event07{position: relative;height: 150px}
+        .event07 .box{position: absolute;top: 50px;left: 0; width: 100px;height: 100px;background: green}
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div class="event01">
+            <p class="exam">예제)1 - 색깔바꾸기</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+            </div>
+            <script type="text/javascript">
+                $('.event01 a').on('click',function(){
+                    $('.event01 .box').addClass('active');
+                    /*$('.event01 .box').css({
+                        'background':'blue'
+                    })*/
+                });
+            </script>
+        </div>
+
+        <div class="event02">
+            <p class="exam">예제)2 - 글자넣기</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+                클릭하면 ( <span></span> ) 여기에 글자가 넣어집니다.
+            </div>
+            <script type="text/javascript">
+                $('.event02 a').on('click',function(){
+                    $('.event02 .box span').text('클릭이밴트발생');                   
+                });
+            </script>
+        </div>
+
+        <div class="event03">
+            <p class="exam">예제)3 - 숫자 증가시키기</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+                클릭하면 ( <span>1</span> ) 여기에 숫자가 증가합니다.
+            </div>
+            <script type="text/javascript">
+                $('.event03 a').on('click',function(){
+                    var num = $('.event03 .box span').text();   
+                    num++              
+                    $('.event03 .box span').text(num);                   
+                });
+            </script>
+        </div>
+
+        <div class="event04">
+            <p class="exam">예제)4 - 박스안에 모양넣기</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+                
+            </div>
+            <script type="text/javascript">
+                $('.event04 a').on('click',function(){
+                    $('.event04 .box').append('<div class="inbox"></div>')       
+                });
+            </script>
+        </div>
+
+        <div class="event05">
+            <p class="exam">예제)5 - 보이고 사라지기</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+                
+            </div>
+            <script type="text/javascript">
+                $('.event05 a').on('click',function(){
+                    var act = $(this).hasClass('active');
+                    if(act==false){
+                        $(this).addClass('active');
+                        $('.event05 .box').addClass('active');
+                    }else if(act==true){
+                        $(this).removeClass('active');
+                        $('.event05 .box').removeClass('active');
+                    }   
+                });
+            </script>
+        </div>
+
+        <div class="event06">
+            <p class="exam">예제)6 - 위치 이동하기</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+                
+            </div>
+            <script type="text/javascript">
+                $('.event06 a').on('click',function(){
+                    var act = $(this).hasClass('active');
+                    if(act==false){
+                        $(this).addClass('active');
+                        $('.event06 .box').css({
+                            'left':200
+                        });
+                    }else if(act==true){
+                        $(this).removeClass('active');
+                        $('.event06 .box').css({
+                            'left':0
+                        });
+                    }   
+                });
+            </script>
+        </div>
+
+        <div class="event07">
+            <p class="exam">예제)7 - 위치 이동하기(애니메이션효과)</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+                
+            </div>
+            <script type="text/javascript">
+                $('.event07 a').on('click',function(){
+                    var act = $(this).hasClass('active');
+                    if(act==false){
+                        $(this).addClass('active');
+                        $('.event07 .box').animate({
+                            'left':200
+                        });
+                    }else if(act==true){
+                        $(this).removeClass('active');
+                        $('.event07 .box').animate({
+                            'left':0
+                        });
+                    }   
+                });
+            </script>
+        </div>
+
+        <div class="event08">
+            <p class="exam">예제)8 - 글자바꾸기</p>
+            <a href="#none">클릭</a>
+            <div class="box">
+                클릭하면 ( <span>있다</span> ) 글자가 바뀝니다.
+            </div>
+            <script type="text/javascript">
+                $('.event08 a').on('click',function(){
+                    var act = $(this).hasClass('active');
+                    if(act==false){
+                        $(this).addClass('active');
+                        $('.event08 .box span').text('없다'); 
+                    }else if(act==true){
+                        $(this).removeClass('active');
+                        $('.event08 .box span').text('있다'); 
+                    }
+                });
+            </script>
+        </div>
+
+        <div class="event09">
+            <p class="exam">예제)9 - 인댁스 구하기</p>
+            <div class="box">
+                <ul>
+                    <li><a href="#none">첫번째</a></li>
+                    <li><a href="#none">두번째</a></li>
+                    <li><a href="#none">세번째</a></li>
+                    <li><a href="#none">네번째</a></li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                $('.event09 li').on('click',function(){
+                   var idx = $(this).index();
+                   alert(idx);
+                });
+            </script>
+        </div>
+
+        <div class="event10">
+            <p class="exam">예제)10 - 클릭한 글자 호출하기</p>
+            <div class="box">
+                <ul>
+                    <li><a href="#none">첫번째 클자</a></li>
+                    <li><a href="#none">두번째 글자</a></li>
+                    <li><a href="#none">세번째 글자</a></li>
+                    <li><a href="#none">네번째 글자</a></li>
+                </ul>
+            </div>
+            <script type="text/javascript">
+                $('.event10 li').on('click',function(){
+                   var text = $(this).find('a').text();
+                   alert(text);
+                });
+            </script>
+        </div>
+
+       
+    </div>
+</body>
+
+</html>
+
+
