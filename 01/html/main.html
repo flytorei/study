@@ -1247,6 +1247,64 @@
                     $('.ex_51').find('.top a').removeAttr('tabindex');
                 </script>
             </div>
+            <div class="exam ex_52" id="exam_52"> 
+                <style>   
+                    .ex_52 .center_wrap{margin: 0 auto;display: table;width: auto;}
+                    .ex_52 ul{overflow: hidden;}
+                    .ex_52 li{float: left;width: 200px;height: 200px;background: yellow;margin: 0 20px}
+                </style>
+                <p class="exam_p">exam 52</p>
+                <p>가운데  정렬</p>
+                <div class="center_wrap">
+                    <ul>
+                        <li>박스</li>
+                        <li>박스</li>
+                        <li>박스</li>
+                        <li>박스</li>
+                    </ul>
+                </div>
+                <script>
+                    $('.ex_51').find('.top a').removeAttr('tabindex');
+                </script>
+            </div>
+            <div class="exam ex_53" id="exam_53"> 
+                <style>   
+                    input[type=radio]::-ms-check,
+                    input[type=checkbox]::-ms-check{display: none}
+                    select::-ms-expand { display: none; }
+
+                    input[type='checkbox']{display:inline-block; -webkit-appearance:none; border:0; border-radius:0; width:20px; height:20px; background:url('../img/bg_chk_auto.png') 0 0 no-repeat; background-size:20px}
+                    input[type='checkbox']:checked{background-position:0 100%}
+                   
+
+                    input[type='radio']{display:inline-block; -webkit-appearance:none; border:0; border-radius:0; width:18px; height:18px; background:url('../img/bg_radio.png') 0 0 no-repeat; background-size:18px}
+                    input[type='radio']:checked{background-position:0 100%}
+
+                    select{-webkit-appearance:none;border:1px solid #aaa;border-radius:3px;font-size:13px;height:25px;line-height:23px;vertical-align:middle;padding:0 20px 0 10px;background:url('../img/bg_select.png') right 10px top 50% no-repeat;background-size:8px auto;color:#333;}
+                   
+                </style>
+                <p class="exam_p">exam 53</p>
+                <p>input 이미지</p>
+                <div>
+                    <input type="radio" name="guide" checked="" title="동의">
+                    <input type="radio" name="guide" title="비동의">
+                </div>
+                <div style="margin-top: 10px">
+                    <input type="checkbox" title="선택">
+                    <input type="checkbox" title="선택" checked>
+                    <input type="checkbox" title="선택" disabled>
+                    <input type="checkbox" title="선택" checked disabled>
+                </div>
+                <div style="margin-top: 10px">
+                    <select title="">
+                        <option>12월26일(월)</option>
+                        <option>12월27일(화)</option>
+                    </select>
+                </div>
+                <script>
+                    $('.ex_51').find('.top a').removeAttr('tabindex');
+                </script>
+            </div>
             
             <div class="scroll">
                 <ul>
